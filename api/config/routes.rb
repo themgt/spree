@@ -31,6 +31,8 @@ Rails.application.routes.draw do
       resources :states, :except => [:new,:edit]
     end
     resources :states, :except => [:new,:edit]
+    
+    resources :users, :except => [:new,:edit]
   end
 
 end
