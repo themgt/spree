@@ -14,7 +14,7 @@ module Spree
         message.to = mail_method.preferred_intercept_email
       end
 
-      if mail_method.preferred_mail_bcc.present?
+      if mail_method.preferred_mail_bcc.present? && message.to != mail_method.preferred_no_bcc
         message.bcc = mail_method.preferred_mail_bcc
       end
     end
